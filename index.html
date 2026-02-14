@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Love Letter</title>
+  
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+    
+    /* Envelope */
+    .envelope {
+      width: 320px;
+      height: 220px;
+      background: #ff4d6d;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    /* Letter */
+    .letter {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      width: 90%;
+      max-width: 700px;
+      height: 90%;
+      background: linear-gradient(to bottom, #fff, #ffe6eb);
+      padding: 40px;
+      box-sizing: border-box;
+      border-radius: 25px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      overflow: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .letter.show {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    
+    .letter h2 {
+      color: #ff4d6d;
+      margin-top: 0;
+    }
+    
+    .message {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.8;
+    }
+    
+    /* Photo container */
+    .photo-gallery {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    
+    /* Individual photo style */
+    .photo-gallery img {
+      width: 150px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+      transition: 0.3s;
+    }
+    
+    /* Tilt effects */
+    .photo1 {
+      transform: rotate(-8deg);
+    }
+    
+    .photo2 {
+      transform: rotate(5deg);
+    }
+    
+    .photo3 {
+      transform: rotate(-4deg);
+    }
+    
+    /* Optional slight hover straighten */
+    .photo-gallery img:hover {
+      transform: rotate(0deg) scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="envelope" onclick="openLetter()">
+    💌 Click to Open
+  </div>
+  
+  <div class="letter" id="letter">
+    <h2>Happy Valentine's 💖</h2>
+    <p class="message">
+      My idol kys,
+      
+      Hello po my idol kys naisipan ko na gumawa ng letter para sayo po heheheh pero may balak talaga po ako na bigyan ka ng diy flower na gawa ko po sa Valentines day but sadly di ko naharap gawin kaya ito munang letter maybe sa next date natin ko na lang po ibigay hehehe. 
+
+Magsosorry din po ako sa mga nagawa kung kasalanan andami ko ng kalasan sayo po :( i truly sorry po talaga about sa mga nagawa kung kasalanan i truly mean it po sana'y patawarin mo na po ako my idol kys 🥺 di ko kaya na ganyan ka sakin ka cold kasi you're special to me po at kung maitanong mo bakit ka special sakin di ko alam basta pag ikaw iba eh ibang iba talaga sayo lang ako nagkaganto and I thankful na nakilala kita kasi you inspire me to be better every day. Because of you po, I want to grow, to dream bigger, to work harder, and maging the kind of person who deserves the love you give so freely po. You make me want to build a future  not just for myself, but for us.
+Pag tatanongin ako kung may tatlo akong wish syempre ang wish ko sa tatlong wish kung yun ay ikaw kasi
+you are not just my idol kys. You are my best friend, my dream, my happiness, and my greatest blessing. 
+
+I love you more than words could ever fully express today, tomorrow, and always.  <br>
+
+
+Forever yours,
+❤️
+
+
+
+    </p>
+    
+    <div class="photo-gallery">
+      <img src="Messenger_creation_044FC635-D374-480F-96D2-DD93DB2DEBEF.jpeg" class="photo1">
+      <img src="Screenshot_2026-02-07-18-42-13-98_f69139cffc4d135a71392e13634f144a.jpg" class="photo2">
+      <img src="received_655599912673739.jpeg" class="photo3">
+    </div>
+  </div>
+  
+  <audio id="bgMusic">
+    <source src="compressed-mxukjRUd.mp4">
+  </audio>
+  
+  <script>
+    let opened = false;
+    
+    function openLetter() {
+      if (opened) return;
+      opened = true;
+      
+      document.getElementById("letter").classList.add("show");
+      document.getElementById("bgMusic").play();
+    }
+  </script>
+  
+</body>
+
+</html>
